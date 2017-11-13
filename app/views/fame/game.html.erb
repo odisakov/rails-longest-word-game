@@ -1,0 +1,17 @@
+<h1>Fame#game</h1>
+<p>Find me in app/views/fame/game.html.erb</p>
+
+<% require_relative "../../models/longest_word.rb" %>
+<% require "date" %>
+
+<%= puts "******** Welcome to the longest word-game!********" %>
+<%= puts "Here is your grid:" %>
+<%= grid = generate_grid(9).join(" ") %>
+<%= puts grid %>
+<%= puts "*****************************************************" %>
+
+<form action="/score">
+  <input type="text" name="input" placeholder="What's your best shot?">
+
+  <input type="submit" >
+</form>
